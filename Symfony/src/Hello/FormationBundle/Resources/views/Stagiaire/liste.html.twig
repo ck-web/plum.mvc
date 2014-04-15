@@ -1,0 +1,26 @@
+<html>
+  <head>
+     {% block stylesheets %}
+        <link href="{{ asset('bundles/helloformation/css/formation.css') }}" type="text/css" rel="stylesheet" />
+     {% endblock %}
+  </head>
+  <body>
+  <h1>Liste des stagiaires</h1>
+  <table>
+	<tr>
+		<th>Nom</th>
+		<th>Prenom</th>
+		<th>Age</th>
+		<th>Module</th>
+	</tr>
+	{% for item in stagiaires %}
+	<tr>
+		<td style="text-align:center">{{item.nom}}</td>
+		<td style="text-align:center">{{item.prenom}}</td>
+		<td style="text-align:center">{{item.age}}</td>
+		<td style="text-align:center">{{item.module.nomM}}</td>
+	</tr>
+	{% endfor %}
+  </table>
+  </body>
+</html>

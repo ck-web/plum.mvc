@@ -1,0 +1,24 @@
+<html>
+  <head>
+     {% block stylesheets %}
+        <link href="{{ asset('bundles/helloformation/css/formation.css') }}" type="text/css" rel="stylesheet" />
+     {% endblock %}
+  </head>
+  <body>
+  <h1>Liste des modules</h1>
+  <table>
+	<tr>
+		<th>Nom module</th>
+		<th>Date début</th>
+		<th>Durée</th>
+	</tr>
+	{% for item in modules %}
+	<tr>
+		<td>{{item.nomM}}</td>
+		<td>{{item.dateDebut|date('d/m/Y',timezone="Europe/Paris")}}</td>
+		<td style="text-align:center">{{item.duree}}</td>
+	</tr>
+	{% endfor %}
+  </table>
+  </body>
+</html>

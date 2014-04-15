@@ -1,0 +1,7 @@
+hello_formation:
+    resource: "@HelloFormationBundle/Resources/config/routing.yml"
+    prefix:   /hello.formation
+
+hello_world:
+    resource: "@HelloWorldBundle/Resources/config/routing.yml"
+    prefix:   /

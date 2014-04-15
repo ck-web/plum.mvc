@@ -1,0 +1,7 @@
+parameters:
+#    hello_formation.example.class: Hello\FormationBundle\Example
+
+services:
+#    hello_formation.example:
+#        class: %hello_formation.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

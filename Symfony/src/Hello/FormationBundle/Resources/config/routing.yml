@@ -1,0 +1,61 @@
+hello_formation_homepage:
+    pattern:  /
+    defaults: { _controller: HelloFormationBundle:Default:index }
+
+module_index:
+    pattern:  /module/index
+    defaults: { _controller: HelloFormationBundle:ManagerModule:index }
+
+module_creer:
+    pattern:  /module/new
+    defaults: { _controller: HelloFormationBundle:ManagerModule:creer }
+
+module_afficher:
+    pattern:  /module/afficher/{id}
+    defaults: { _controller: HelloFormationBundle:ManagerModule:afficher }
+    requirements :
+        id: \d+
+
+module_modifier:
+    pattern:  /module/modifier/{id}/{nouveauNom}
+    defaults: { _controller: HelloFormationBundle:ManagerModule:modifier }
+    requirements :
+        id: \d+
+
+module_supprimer:
+    pattern:  /module/supprimer/{id}
+    defaults: { _controller: HelloFormationBundle:ManagerModule:supprimer }
+
+module_liste:
+    pattern:  /module/liste
+    defaults:  { _controller: HelloFormationBundle:ManagerModule:lister }
+
+stagiaire_index:
+    pattern:  /stagiaire/index
+    defaults: { _controller: HelloFormationBundle:ManagerStagiaire:index }
+
+stagiaire_creer:
+    pattern:  /stagiaire/new
+    defaults: { _controller: HelloFormationBundle:ManagerStagiaire:creer }
+
+stagiaire_modifier:
+    pattern:  /stagiaire/modifier/{id}/{nouveauNom}
+    defaults: { _controller: HelloFormationBundle:ManagerStagiaire:modifier }
+    requirements :
+        id: \d+
+
+stagiaire_supprimer:
+    pattern:  /stagiaire/supprimer/{id}
+    defaults: { _controller: HelloFormationBundle:ManagerStagiaire:supprimer }
+
+stagiaire_liste:
+    pattern:  /stagiaire/liste
+    defaults:  { _controller: HelloFormationBundle:ManagerStagiaire:lister }
+
+form_creer:
+    pattern:  /form/new
+    defaults:  { _controller: HelloFormationBundle:ManagerFormModule:creer }
+
+form_modifier:
+    pattern:  /form/modifier/{id}
+    defaults:  { _controller: HelloFormationBundle:ManagerFormModule:modifier }
